@@ -1,0 +1,53 @@
+*
+{box-sizing: border-box;padding: 0;margin: 0;}
+*::after
+{box-sizing: border-box;padding: 0;margin: 0;}
+*::before
+{box-sizing: border-box;padding: 0;margin: 0;}
+body{
+    height: 100vh;
+}
+#demo1 {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 50%;
+    font-size: 16px;
+    font-family: "华文行楷";
+    overflow-y: auto;
+    background-color: blanchedalmond;
+    animation:change 3s linear 0s infinite;
+}
+@keyframes change{
+    0%{
+        color:rgb(100, 156, 95);
+    }
+    50% {
+        color:#8e469b;
+    }
+    100%{
+        color:rgb(207, 173, 100)
+    }
+}
+
+#demo1::-webkit-scrollbar {
+    display: none;
+}
+#html {
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(100deg, rgba(58,177,180,1) 0%, rgba(29,253,198,1) 40%, rgba(252,69,232,1) 60%);
+}
+
+@media screen and (min-width: 500px)  {
+
+    #demo1{
+    font-size:6em;
+    }
+}
+
+/*# sourceMappingURL=/demo.b3443d18.css.map */
