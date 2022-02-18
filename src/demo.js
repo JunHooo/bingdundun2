@@ -138,13 +138,20 @@ const string2=`
     border-radius: 50%;
     left: 40%;
 }
-.nose{
+#face{
     position: absolute;
+    border:none;
+    width: 10vw;
+    height: 10vw;
+    top:18vw;
+}
+.nose{
+    position: relative;
     border-radius: 50%;
     background-color: black;
+    left: 3.5vw;
     height: 2vw;
     width: 3vw;
-    top:17vw;
     z-index: 10;
 }
 /*.monthtop{*/
@@ -161,7 +168,8 @@ const string2=`
     background-color: black;
     height: 5vw;
     width: 6vw;
-    top:17vw;
+    left: 2vw;
+    top:-1vw;
 }
 .monthdown{
     position: absolute;
@@ -169,7 +177,8 @@ const string2=`
     background-color: white;
     height: 5vw;
     width: 7vw;
-    top:16vw;
+    left: 1.5vw;
+    top:-2vw;
 }
 .tongue{
     position: absolute;
@@ -177,7 +186,8 @@ const string2=`
     width: 1vw;
     height: 0.5vw;
     border-radius: 0.5vw 0.5vw 0 0;
-    top:21.5vw;
+    top:3.4vw;
+    left: 4.5vw;
 }
 // .mark{
 //     height:7vw ;

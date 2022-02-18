@@ -13,7 +13,7 @@ body{
     top: 0;
     left: 0;
     width: 50%;
-    font-size: 16px;
+    /*font-size: 16px;*/
     font-family: "华文行楷";
     overflow-y: auto;
     background-color: blanchedalmond;
@@ -36,16 +36,33 @@ body{
 }
 #html {
     position: fixed;
-    top:0;
     right: 0;
     width: 50%;
     height: 100vh;
     background: linear-gradient(100deg, rgba(58,177,180,1) 0%, rgba(29,253,198,1) 40%, rgba(252,69,232,1) 60%);
 }
-
 @media screen and (min-width: 500px)  {
 
     #demo1{
-    font-size:6em;
+    font-size:3em;
+    }
+}
+@media screen and (max-width: 500px)  {
+    #demo1 {
+        height: 25vh;
+        top: 0;
+        width: 100%;
+    }
+    #html {
+        bottom: 0;
+        height: 75vh;
+        width: 100%;
+    }
+    .all{
+      margin-top:500px;
+    }
+    #face{
+        top:214px;
+        border: none;
     }
 }
