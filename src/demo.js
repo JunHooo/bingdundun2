@@ -70,7 +70,7 @@ const string2=`
     margin-top: -3vw;
     background-color: black;
     position: relative;
-    z-index:1;
+    z-index:2;
 }
 .righteye1{
     height: 9vw;
@@ -81,7 +81,7 @@ const string2=`
     margin-top: -3vw;
     background-color: black;
     position: relative;
-    z-index:1;
+    z-index:2;
 }
 .lefteye2{
     height: 4vw;
@@ -146,7 +146,7 @@ const string2=`
     width: 10vw;
     height: 10vw;
     top:18vw;
-    z-index:-1;
+    z-index:1;
 }
 .nose{
     position: relative;
@@ -182,7 +182,6 @@ const string2=`
     width: 7vw;
     left: 1.5vw;
     top:-2vw;
-    z-index:-1;
 }
 .tongue{
     position: absolute;
