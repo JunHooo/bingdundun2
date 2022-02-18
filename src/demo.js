@@ -144,6 +144,7 @@ const string2=`
     width: 10vw;
     height: 10vw;
     top:18vw;
+    z-index=-1;
 }
 .nose{
     position: relative;
