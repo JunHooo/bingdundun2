@@ -1,4 +1,5 @@
-const string2=`
+const string2 = `/* 送你一只冰墩墩
+我要开始画了 */
 .big{
     display: flex;
     justify-content: center;
@@ -7,7 +8,6 @@ const string2=`
     width:100%;
 }
 .all{
-
     width: 60vw;
     height: 100vh;
     display: flex;
@@ -157,14 +157,6 @@ const string2=`
     width: 3vw;
     z-index: 10;
 }
-/*.monthtop{*/
-/*    position: absolute;*/
-/*    border-radius: 50%;*/
-/*    box-shadow: 0px 4px 0px 0px red;*/
-/*    width: 10vh;*/
-/*    height: 10vh;*/
-/*    top:40%;*/
-/*}*/
 .monthtop{
     position: absolute;
     border-radius: 50%  50%  50%  50%  / 40%   40%   49%  49%;
@@ -192,17 +184,6 @@ const string2=`
     top:3.4vw;
     left: 4.5vw;
 }
-// .mark{
-//     height:7vw ;
-//     width: 7vw;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-// img{
-//     max-height: 5vw;
-//     max-width: 7vw;
-// }
 .leftear{
     position: absolute;
     width: 10vw;
@@ -314,6 +295,7 @@ const string2=`
     border-radius: 0 0 20% 20%;
     z-index: -1;
 }
+/* 好了,我画完了 */
 `
 const string1 = `Hi,宝贝
 这是我为你做的第二只冰墩墩
@@ -324,30 +306,72 @@ const string1 = `Hi,宝贝
 曾经沧海难为水
 除却巫山不是云
 `
-let n = 0;
-let m = 0;
+let n = 0
+let m = 0
 // let time = 0;
-const play = () => {
-    let demo1 =document.querySelector('#demo1');
-    demo1.innerText = string1.substr(0, m);
-    // demo2.scrollTop = 999999
-    demo1.scrollTop = demo1.scrollHeight
-    m = m + 1;
-    if (m > string1.length) {
-        window.clearInterval(id)
-    }
-}
+// const play = () => {
+//     let demo1 =document.querySelector('#demo1');
+//     demo1.innerText = string1.substr(0, m);
+//     // demo2.scrollTop = 999999
+//     demo1.scrollTop = demo1.scrollHeight
+//     m = m + 1;
+//     if (m > string1.length) {
+//         window.clearInterval(id)
+//     }
+// }
+// const play = () => {
+//     let demo1 =document.querySelector('#demo1');
+//     demo1.innerText = string2.substr(0, m);
+//     // demo2.scrollTop = 999999
+//     demo1.scrollTop = demo1.scrollHeight
+//     m = m + 1;
+//     if (m > string2.length) {
+//         window.clearInterval(id2)
+//     }
+// }
 const play2 = () => {
-    let demo2 =document.querySelector('#demo2');
-    demo2.innerHTML = string2.substr(0, n);
-    // demo2.scrollTop = 999999
-    n = n + 1;
-    if (n > string2.length) {
-        window.clearInterval(id2)
-    }
+  let demo1 = document.querySelector('#demo1')
+  let demo2 = document.querySelector('#demo2')
+  demo2.innerHTML = string2.substr(0, n)
+  demo1.innerText = string2.substr(0, n)
+  demo1.scrollTop = 99999
+  n = n + 1
+  if (n > string2.length) {
+    window.clearInterval(id2)
+  }
 }
-let id = setInterval(play, 300)
-let id2 = setInterval(play2, 0)
+let time = 50
+let id2 = setInterval(play2, time)
+let status = true
+function start() {
+  if (status === true) {
+    window.clearInterval(id2)
+    status = !status
+  } else {
+    id2 = setInterval(play2, time)
+    status = !status
+  }
+}
+
+function slow() {
+  window.clearInterval(id2)
+  time = 100;
+  id2 = setInterval(play2, time)
+}
+function normal() {
+  window.clearInterval(id2)
+  time = 50;
+  id2 = setInterval(play2, time)
+}
+function fast() {
+  window.clearInterval(id2)
+  time = 0;
+  id2 = setInterval(play2, time)
+}
+
+
+// let id = setInterval(play, 300)
+
 
 // function toggleSound() {
 //     let music = document.getElementById('bgMusic');//获取ID

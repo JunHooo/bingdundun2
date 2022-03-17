@@ -7,17 +7,36 @@
 body{
     height: 100vh;
 }
+.xxx{
+    height: 100vh;
+    width: 40%;
+}
 #demo1 {
     position: fixed;
     height: 100vh;
     top: 0;
     left: 0;
-    width: 50%;
-    /*font-size: 16px;*/
-    font-family: "华文行楷";
+    width: 40%;
+    font-size: 16px;
+    /*font-family: "华文行楷";*/
     overflow-y: auto;
     background-color: blanchedalmond;
     animation:change 3s linear 0s infinite;
+}
+.buttons{
+    position: relative;
+    z-index: 10;
+    margin-top: 10px;
+    right:0;
+}
+button {
+    padding: 5px;
+    display: block;
+    margin-top: 10px;
+    margin-left: 85%;
+}
+.noShow{
+    display: none;
 }
 @keyframes change{
     0%{
@@ -37,24 +56,30 @@ body{
 #html {
     position: fixed;
     right: 0;
-    width: 50%;
+    top:0;
+    width: 60%;
     height: 100vh;
     background: linear-gradient(100deg, rgba(58,177,180,1) 0%, rgba(29,253,198,1) 40%, rgba(252,69,232,1) 60%);
 }
 @media screen and (min-width: 500px)  {
 
     #demo1{
-    font-size:3em;
+    font-size:16px;
     }
 }
 @media screen and (max-width: 500px)  {
+    .xxx{
+        height: 25vh;
+        top: 0;
+        width: 100%;
+    }
     #demo1 {
         height: 25vh;
         top: 0;
         width: 100%;
     }
     #html {
-        bottom: 0;
+        top: 25%;
         height: 75vh;
         width: 100%;
     }
